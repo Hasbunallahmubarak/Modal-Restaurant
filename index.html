@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Modal Restuarant</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale = 1.0">
+	<link rel="stylesheet" type="text/css" href="Modal Restaurant.css">
+</head>
+<body>
+	<div class="container">
+		<a href="#menu" onclick="openM()">Menu</a>
+		<br>
+		<a href="#contact" onclick="openC()">Contact</a>
+		<span>logo</span>
+		<div>
+			<h2>monday - friday 10-23 | saturday 14-02</h2>
+			<h3>42 village St, Lacoste, Lagos</h3>
+			<footer>Developed by Hmabiola | Template from <a href="https://www.w3schools.com/w3css/tryw3css_templates_restaurant_modal.html" target="_blank">W3schools</a></footer>
+		</div>
+	</div>
+	<div id="modal">
+		<div id="menu">
+			<h1>Starters<span onclick="closeM()">&times;</span></h1>
+			<p>Tomato Soup <b>$2.50</b></p>
+			<p>Chicken Salad <b>$3.50</b></p>
+			<p>Bread and Butter <b>$1.00</b></p>
+			<h1>Main Courses</h1>
+			<p>Grilled Fish and Potatoes <b>$8.50</b></p>
+			<p>Italian Pizza <b>$5.50</b></p>
+			<p>Veggie Pasta <b>$4.00</b></p>
+			<p>Chicken and Potatoes <b>$6.50</b></p>
+			<p>Deluxe Burger <b>$5.00</b></p>
+			<h1>Desserts</h1>
+			<p>Fruit Salad <b>$2.50</b></p>
+			<p>Ice cream <b>$2.00</b></p>
+			<p>Chocolate Cake <b>$4.00</b></p>
+			<p>Cheese <b>$5.50</b></p>
+		</div>
+		<div id="contact">
+			<h1>Contact <span onclick="closeC()">&times;</span></h1>
+			<div>
+				<p>Reserve a table, ask for today's special or just send us a message:</p>
+				<form method="GET" action="#">
+					<input type="text" name="name" placeholder="Name" required="required">
+					<input type="number" name="Number" placeholder="How many people" max="100" min="0" required="required">
+					<input type="datetime-local" name="dateandtime" placeholder="Date and Time" value="2023-06-27T22:47" required="required">
+					<input type="text" name="message" placeholder="Message \ Special requirements" required="required">
+					<button type="button">SEND MESSAGE</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		function openC() {
+			document.getElementById('contact').style.display = "block";
+			document.getElementById('modal').style.display = "block";
+		}
+		function openM() {
+			document.getElementById('menu').style.display = "block";
+			document.getElementById('modal').style.display = "block";
+		}
+		function closeC() {
+			document.getElementById('contact').style.display = "none";
+			document.getElementById('modal').style.display = "none";
+		}
+		function closeM() {
+			document.getElementById('menu').style.display = "none";
+			document.getElementById('modal').style.display = "none";
+		}
+	</script>
+</body>
+</html>
